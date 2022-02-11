@@ -1,0 +1,11 @@
+config:
+  giturl: https://github.training.cerner.com/ob095866/Test1.git
+  
+spring:
+  application:
+    name: gittool
+    
+  
+  
+    
+    

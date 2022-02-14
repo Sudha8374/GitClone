@@ -24,13 +24,18 @@ public class GitController {
 	public String findAndReplaceGitRepo( @RequestParam String sourceBranch,@RequestParam String destinationBranchName ,@RequestParam String findKey, @RequestParam String replaceKey) 
 	{
 		
-		gitService.cloneRepository(sourceBranch);
-		
-		gitService.recurseOnFile("C:\\Cloning2");
-		System.out.println("Find and replace is done");
-		gitService.createAndCommitBranch(destinationBranchName);
 		
 		//step1:Clone the existing repo
+		gitService.cloneRepository(sourceBranch);
+		
+		//step2: finding and replacing the keyword form the cloned directory
+		gitService.recurseOnFile("C:\\Cloning2");
+		System.out.println("Find and replace is done");
+		
+		//step3: creating and committing the modified(after find and replace is done)directory into newly created branch 
+		gitService.createAndCommitBranch(destinationBranchName);
+		
+		
 		
 		return null;
 		

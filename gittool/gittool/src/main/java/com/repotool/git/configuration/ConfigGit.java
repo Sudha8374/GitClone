@@ -12,6 +12,34 @@ import org.springframework.stereotype.Service;
 public class ConfigGit {
 
 	private String giturl;
+	private String gitUsername;
+	private String gitPassword;
+    private String gitcloneDirectoryPath;
+	
+	
+	public String getGitcloneDirectoryPath() {
+		return gitcloneDirectoryPath;
+	}
+
+	public void setGitcloneDirectoryPath(String gitcloneDirectoryPath) {
+		this.gitcloneDirectoryPath = gitcloneDirectoryPath;
+	}
+
+	public String getGitUsername() {
+		return gitUsername;
+	}
+
+	public void setGitUsername(String gitUsername) {
+		this.gitUsername = gitUsername;
+	}
+
+	public String getGitPassword() {
+		return gitPassword;
+	}
+
+	public void setGitPassword(String gitPassword) {
+		this.gitPassword = gitPassword;
+	}
 
 	public String getGiturl() {
 		return giturl;
